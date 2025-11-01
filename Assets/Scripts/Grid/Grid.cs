@@ -70,9 +70,18 @@ namespace Tuleeeeee.GridSystem
             }
         }
 
+        public int GetWidth()
+        {
+            return width;
+        }
+        public int GetHeight()
+        {
+            return height;
+        }
+
         public Vector3 GetWorldPosition(int x, int y)
         {
-            return originPosition + new Vector3(x, y) * cellSize;
+            return new Vector3(x, y) * cellSize + originPosition;
         }
 
         public void GetXY(Vector3 worldPosition, out int x, out int y)
@@ -100,8 +109,7 @@ namespace Tuleeeeee.GridSystem
 
         public void SetGridObject(Vector3 worldPosition, TGridObject value)
         {
-            int x, y;
-            GetXY(worldPosition, out x, out y);
+            GetXY(worldPosition, out int x, out int y);
             SetGridObject(x, y, value);
         }
 

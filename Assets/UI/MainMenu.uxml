@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/Button.uss?fileID=7433441132597879392&amp;guid=71266d2f34b40eb419c16aae952d98a4&amp;type=3#Button" />
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/ui_assets/bg.png?fileID=2800000&amp;guid=43d54e12765ca4049bb66368d429d248&amp;type=3#bg&quot;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="Logo" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/ui_assets/game_title.png?fileID=2800000&amp;guid=2f7b6b061cacace43b8acc33de60ceae&amp;type=3#game_title&quot;);" />
+    </ui:VisualElement>
+</ui:UXML>

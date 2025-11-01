@@ -13,7 +13,7 @@ namespace Tuleeeeee.Utilities
         // Get Sorting order to set SpriteRenderer sortingOrder, higher position = lower sortingOrder
         public static int GetSortingOrder(Vector3 position, int offset, int baseSortingOrder = sortingOrderDefault)
         {
-            return (int) (baseSortingOrder - position.y) + offset;
+            return (int)(baseSortingOrder - position.y) + offset;
         }
 
         // Create Text in the World
@@ -149,6 +149,18 @@ namespace Tuleeeeee.Utilities
         {
             Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
             return worldPosition;
+        }
+
+        public static Vector3 GetTouchWorldPosition()
+        {
+            if (Input.touchCount > 0)
+            {
+                Vector3 screenPosition = Input.GetTouch(0).position;
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+                worldPosition.z = 0f;
+                return worldPosition;
+            }
+            return Vector3.zero;
         }
     }
 }
